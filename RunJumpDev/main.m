@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "FirsPageAppDelegate.h"
+#import "FirstPageAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([FirsPageAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([FirstPageAppDelegate class]));
     }
 }
