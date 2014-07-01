@@ -1,6 +1,8 @@
 iOS-App-For-YouSawMe
 ======================
 
+www.yousawme.com owner Seth McBee needed an app to help him log customer data at trade shows.  I vonlunteered to help.
+
 Form App for iPads that can be used offline and dump data when you have WiFi, great tool for big conventions
 
 If user input "Admin" in First Name, Last Name, and Email field and hit next, you will be redirected to the admin page.
