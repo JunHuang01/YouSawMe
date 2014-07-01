@@ -11,6 +11,8 @@
 
 @interface Database : NSObject
 @property (nonatomic,strong) NSString * filePath;
+@property (nonatomic,strong) NSString * csvFilePath;
+
 @property (nonatomic) sqlite3 * database;
 -(BOOL) saveDataWithFirstName:(NSString*) firstName
                      lastName:(NSString*) lastName
@@ -18,9 +20,9 @@
                      homeCity:(NSString*) homeCity
                         state:(NSString*) state
                  otherPurpose:(NSString*) otherPurpose
-                  gameChoices:(NSMutableArray *) gameChoices
-                bFutureNotify:(int)bFutureNotify
-                    bCheckAll:(int)bCheckAll;
+                  gameChoices:(NSMutableArray *) gameChoices;
 
 -(BOOL)openDB;
+-(void)DumpDBtoCSV;
+-(NSString *)dataCSVFilePath;
 @end

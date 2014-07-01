@@ -84,7 +84,8 @@
         // TODO: autorelease pool needed ?
         
         _mydatabase = [[Database alloc] init];
-        _databasePath = _mydatabase.filePath;
+        [_mydatabase DumpDBtoCSV];
+        _databasePath = [_mydatabase dataCSVFilePath];
         filePath = _databasePath;
         NSData* database = [NSData dataWithContentsOfFile: filePath];
         

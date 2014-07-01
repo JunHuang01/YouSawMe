@@ -16,8 +16,6 @@
 @property (nonatomic,strong) NSString * homeCity;
 @property (nonatomic,strong) NSString * state;
 @property (nonatomic,strong) NSString * otherPurpose;
-@property (nonatomic) BOOL bCheckAll;
-@property (nonatomic) BOOL bNotifyFutureGame;
 
 @property (nonatomic,readwrite) NSMutableArray *gameSelection;
 

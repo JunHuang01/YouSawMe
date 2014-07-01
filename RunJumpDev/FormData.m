@@ -98,7 +98,7 @@ static FormData * single = nil;
     if (!_gameSelection) {
         BOOL bFalse = NO;
         NSNumber * defaultNum = [NSNumber numberWithBool:bFalse];
-        _gameSelection = [[NSMutableArray alloc] initWithArray:[NSArray arrayWithObjects:defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum, nil]];
+        _gameSelection = [[NSMutableArray alloc] initWithArray:[NSArray arrayWithObjects:defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum,defaultNum, nil]];
     }
     
     return _gameSelection;
@@ -110,11 +110,8 @@ static FormData * single = nil;
 }
 
 -(BOOL)SaveToDB{
-    
-    int bNotifyFuture = [[NSNumber numberWithBool:_bNotifyFutureGame] intValue];
-    int bCheck = [[NSNumber numberWithBool:_bCheckAll] intValue];
     _database = [[Database alloc] init];
-    return [_database saveDataWithFirstName:_firstName lastName:_lastName email:_Email homeCity:_homeCity state:_state otherPurpose:_otherPurpose gameChoices:_gameSelection bFutureNotify:bNotifyFuture bCheckAll:bCheck];
+    return [_database saveDataWithFirstName:_firstName lastName:_lastName email:_Email homeCity:_homeCity state:_state otherPurpose:_otherPurpose gameChoices:_gameSelection];
 }
 
 

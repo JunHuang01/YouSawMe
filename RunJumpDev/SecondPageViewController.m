@@ -31,7 +31,7 @@
     _currForm = [[FormData alloc] init];
     _currForm = [_currForm currFormData];
     
-    [_checkAllGameBox setSelected: [_currForm bCheckAll]];
+
     for ( int i = 0; i < [_gameCheckedList count]; ++i){
         BOOL bSel = [[[_currForm gameSelection] objectAtIndex:i] boolValue];
         [[_gameCheckedList objectAtIndex:i] setSelected:bSel];
@@ -39,8 +39,6 @@
     
     self.otherPurpose.text = [_currForm otherPurpose];
     
-    BOOL bFutureNotify = [_currForm bNotifyFutureGame];
-    [_bNotifyFutureGame setSelected:bFutureNotify];
     
     /*
     if([_checkAllGameBox isSelected])
@@ -72,7 +70,6 @@
     BOOL bCheckALL = [_checkAllGameBox isSelected];
     if((UIButton *)sender == _checkAllGameBox){
         bCheckALL = !bCheckALL;
-        [_currForm setBCheckAll:bCheckALL];
         [_checkAllGameBox setSelected:bCheckALL];
         if (bCheckALL){
             //[_checkAllGameBox setBackgroundColor:[UIColor redColor]];
@@ -96,7 +93,6 @@
             BOOL bIsSelected = ![currButton isSelected];
             if(!bIsSelected){
                 [_checkAllGameBox setSelected:NO];
-                [_currForm setBCheckAll:NO];
             }
             [currButton setSelected:bIsSelected];
             [_currForm setGameSelection:bIsSelected withObjectIndexAt:i];
