@@ -33,6 +33,7 @@
 		0EA87DA118EC44180057715D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA87DA018EC44180057715D /* libsqlite3.dylib */; };
 		0EA87DA418EC47620057715D /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87DA318EC47620057715D /* Database.m */; };
 		0EA87DA718F0322D0057715D /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87DA618F0322D0057715D /* FinalPageViewController.m */; };
+		0EFAC57A196291B40050D37A /* YouSawMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAC579196291B40050D37A /* YouSawMe.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		0EA87DA318EC47620057715D /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		0EA87DA518F0322D0057715D /* FinalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPageViewController.h; sourceTree = "<group>"; };
 		0EA87DA618F0322D0057715D /* FinalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalPageViewController.m; sourceTree = "<group>"; };
+		0EFAC579196291B40050D37A /* YouSawMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YouSawMe.png; path = RunJumpDev/YouSawMe.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 		0EA87D7618E6D21F0057715D /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				0EFAC579196291B40050D37A /* YouSawMe.png */,
 				0EA87D8C18EBE7CA0057715D /* unchecked.png */,
 				0EA87D8818EBE7680057715D /* checked.png */,
 				0EA87D8618EBE62E0057715D /* smile.png */,
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA87D5A18E66BD90057715D /* Images.xcassets in Resources */,
+				0EFAC57A196291B40050D37A /* YouSawMe.png in Resources */,
 				0EA87D7818E6D22A0057715D /* run_jump_dev.png in Resources */,
 				0EA87D8718EBE62E0057715D /* smile.png in Resources */,
 				0EA87D8918EBE7680057715D /* checked.png in Resources */,
