@@ -156,7 +156,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onNextPage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCL-1x-HRu"/>
-                                            <segue destination="BiA-rE-xlm" kind="modal" identifier="FirstToSecondSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="eap-Zu-Z7c"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htU-IW-zcX">
@@ -218,6 +217,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please input valid email address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-B0-elA">
+                                        <rect key="frame" x="253" y="196" width="517" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.028675036639999998" blue="0.074330781770000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -231,12 +237,23 @@
                                     <segue destination="e38-2m-Cbk" kind="modal" identifier="AdminSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Jfe-Tb-a3b"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyZ-Ux-Vn9">
+                                <rect key="frame" x="20" y="718" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BiA-rE-xlm" kind="modal" identifier="FirstToSecondSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="TPW-if-2gD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="EmailAlert" destination="CTa-B0-elA" id="9d9-1Y-0m5"/>
                         <outlet property="EmailField" destination="F7C-aB-zJT" id="RZS-Zp-5kW"/>
                         <outlet property="FirstNameField" destination="I3b-ru-3Md" id="AoZ-QU-wiS"/>
                         <outlet property="HomeCity" destination="3aA-rb-HRA" id="wuf-87-nc2"/>
@@ -247,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1606" y="-1247"/>
+            <point key="canvasLocation" x="-1626" y="-1257"/>
         </scene>
         <!--Admin Page View Controller-->
         <scene sceneID="qzI-bN-r7o">
@@ -672,6 +689,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CyI-68-AAb"/>
+        <segue reference="hNs-nt-6jb"/>
     </inferredMetricsTieBreakers>
 </document>

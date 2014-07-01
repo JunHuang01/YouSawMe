@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *HomeCity;
 @property (weak, nonatomic) IBOutlet UIButton *StatePicker;
 @property (strong, nonatomic) FormData * currForm;
+@property (strong, nonatomic) IBOutlet UILabel *EmailAlert;
 
 - (BOOL) textFieldShouldReturn:(UITextField *)theTextField;
 @end

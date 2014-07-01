@@ -158,7 +158,7 @@
                 NSNumber* game6 = [NSNumber numberWithInt:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 12)] intValue]];
                 NSNumber* game7 = [NSNumber numberWithInt:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 13)] intValue]];
                 NSNumber* game8 = [NSNumber numberWithInt:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 14)] intValue]];
-                csv = [csv stringByAppendingFormat:@"%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,\n",
+                csv = [csv stringByAppendingFormat:@"%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@,%@\n",
                  FirstName,
                  LastName,
                  Email,

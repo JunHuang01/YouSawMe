@@ -34,6 +34,7 @@
 		0EA87DA718F0322D0057715D /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87DA618F0322D0057715D /* FinalPageViewController.m */; };
 		0EFAC57A196291B40050D37A /* YouSawMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAC579196291B40050D37A /* YouSawMe.png */; };
 		0EFAC57E1962B4820050D37A /* StatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFAC57D1962B4820050D37A /* StatePickerViewController.m */; };
+		0EFAC580196350410050D37A /* YouSawMe-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAC57F196350410050D37A /* YouSawMe-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,19 +50,19 @@
 /* Begin PBXFileReference section */
 		0E1049F818F03AD800E17081 /* AdminPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminPageViewController.h; sourceTree = "<group>"; };
 		0E1049F918F03AD800E17081 /* AdminPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminPageViewController.m; sourceTree = "<group>"; };
-		0EA87D3E18E66BD80057715D /* RunJumpDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunJumpDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA87D3E18E66BD80057715D /* YouSawMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouSawMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA87D4118E66BD80057715D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EA87D4318E66BD90057715D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0EA87D4518E66BD90057715D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EA87D4918E66BD90057715D /* RunJumpDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RunJumpDev-Info.plist"; sourceTree = "<group>"; };
 		0EA87D4B18E66BD90057715D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0EA87D4D18E66BD90057715D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0EA87D4F18E66BD90057715D /* RunJumpDev-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunJumpDev-Prefix.pch"; sourceTree = "<group>"; };
+		0EA87D4F18E66BD90057715D /* YouSawMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouSawMe-Prefix.pch"; sourceTree = "<group>"; };
 		0EA87D5418E66BD90057715D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EA87D5918E66BD90057715D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0EA87D5F18E66BD90057715D /* RunJumpDevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunJumpDevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA87D5F18E66BD90057715D /* YouSawMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouSawMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA87D6018E66BD90057715D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0EA87D6818E66BD90057715D /* RunJumpDevTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RunJumpDevTests-Info.plist"; sourceTree = "<group>"; };
+		0EA87D6818E66BD90057715D /* YouSawMeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YouSawMeTests-Info.plist"; sourceTree = "<group>"; };
 		0EA87D6A18E66BD90057715D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0EA87D6C18E66BD90057715D /* RunJumpDevTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunJumpDevTests.m; sourceTree = "<group>"; };
 		0EA87D7718E6D22A0057715D /* run_jump_dev.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run_jump_dev.png; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		0EFAC57B1962A0840050D37A /* FinalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPageViewController.h; sourceTree = "<group>"; };
 		0EFAC57C1962B4820050D37A /* StatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatePickerViewController.h; sourceTree = "<group>"; };
 		0EFAC57D1962B4820050D37A /* StatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatePickerViewController.m; sourceTree = "<group>"; };
+		0EFAC57F196350410050D37A /* YouSawMe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "YouSawMe-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +129,8 @@
 		0EA87D3F18E66BD80057715D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EA87D3E18E66BD80057715D /* RunJumpDev.app */,
-				0EA87D5F18E66BD90057715D /* RunJumpDevTests.xctest */,
+				0EA87D3E18E66BD80057715D /* YouSawMe.app */,
+				0EA87D5F18E66BD90057715D /* YouSawMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,10 +164,11 @@
 		0EA87D4818E66BD90057715D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0EFAC57F196350410050D37A /* YouSawMe-Info.plist */,
 				0EA87D4918E66BD90057715D /* RunJumpDev-Info.plist */,
 				0EA87D4A18E66BD90057715D /* InfoPlist.strings */,
 				0EA87D4D18E66BD90057715D /* main.m */,
-				0EA87D4F18E66BD90057715D /* RunJumpDev-Prefix.pch */,
+				0EA87D4F18E66BD90057715D /* YouSawMe-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 		0EA87D6718E66BD90057715D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0EA87D6818E66BD90057715D /* RunJumpDevTests-Info.plist */,
+				0EA87D6818E66BD90057715D /* YouSawMeTests-Info.plist */,
 				0EA87D6918E66BD90057715D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -241,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EA87D3D18E66BD80057715D /* RunJumpDev */ = {
+		0EA87D3D18E66BD80057715D /* YouSawMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA87D7018E66BD90057715D /* Build configuration list for PBXNativeTarget "RunJumpDev" */;
+			buildConfigurationList = 0EA87D7018E66BD90057715D /* Build configuration list for PBXNativeTarget "YouSawMe" */;
 			buildPhases = (
 				0EA87D3A18E66BD80057715D /* Sources */,
 				0EA87D3B18E66BD80057715D /* Frameworks */,
@@ -253,14 +256,14 @@
 			);
 			dependencies = (
 			);
-			name = RunJumpDev;
+			name = YouSawMe;
 			productName = RunJumpDev;
-			productReference = 0EA87D3E18E66BD80057715D /* RunJumpDev.app */;
+			productReference = 0EA87D3E18E66BD80057715D /* YouSawMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EA87D5E18E66BD90057715D /* RunJumpDevTests */ = {
+		0EA87D5E18E66BD90057715D /* YouSawMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EA87D7318E66BD90057715D /* Build configuration list for PBXNativeTarget "RunJumpDevTests" */;
+			buildConfigurationList = 0EA87D7318E66BD90057715D /* Build configuration list for PBXNativeTarget "YouSawMeTests" */;
 			buildPhases = (
 				0EA87D5B18E66BD90057715D /* Sources */,
 				0EA87D5C18E66BD90057715D /* Frameworks */,
@@ -271,9 +274,9 @@
 			dependencies = (
 				0EA87D6518E66BD90057715D /* PBXTargetDependency */,
 			);
-			name = RunJumpDevTests;
+			name = YouSawMeTests;
 			productName = RunJumpDevTests;
-			productReference = 0EA87D5F18E66BD90057715D /* RunJumpDevTests.xctest */;
+			productReference = 0EA87D5F18E66BD90057715D /* YouSawMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -294,7 +297,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EA87D3918E66BD80057715D /* Build configuration list for PBXProject "RunJumpDev" */;
+			buildConfigurationList = 0EA87D3918E66BD80057715D /* Build configuration list for PBXProject "YouSawMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -307,8 +310,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EA87D3D18E66BD80057715D /* RunJumpDev */,
-				0EA87D5E18E66BD90057715D /* RunJumpDevTests */,
+				0EA87D3D18E66BD80057715D /* YouSawMe */,
+				0EA87D5E18E66BD90057715D /* YouSawMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +326,7 @@
 				0EA87D7818E6D22A0057715D /* run_jump_dev.png in Resources */,
 				0EA87D8718EBE62E0057715D /* smile.png in Resources */,
 				0EA87D8918EBE7680057715D /* checked.png in Resources */,
+				0EFAC580196350410050D37A /* YouSawMe-Info.plist in Resources */,
 				0EA87D4C18E66BD90057715D /* InfoPlist.strings in Resources */,
 				0EA87D5518E66BD90057715D /* Main.storyboard in Resources */,
 				0EA87D8D18EBE7CA0057715D /* unchecked.png in Resources */,
@@ -370,7 +374,7 @@
 /* Begin PBXTargetDependency section */
 		0EA87D6518E66BD90057715D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EA87D3D18E66BD80057715D /* RunJumpDev */;
+			target = 0EA87D3D18E66BD80057715D /* YouSawMe */;
 			targetProxy = 0EA87D6418E66BD90057715D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -484,10 +488,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RunJumpDev/RunJumpDev-Prefix.pch";
-				INFOPLIST_FILE = "RunJumpDev/RunJumpDev-Info.plist";
+				GCC_PREFIX_HEADER = "RunJumpDev/YouSawMe-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/RunJumpDev/YouSawMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YouSawMe;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -499,10 +503,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RunJumpDev/RunJumpDev-Prefix.pch";
-				INFOPLIST_FILE = "RunJumpDev/RunJumpDev-Info.plist";
+				GCC_PREFIX_HEADER = "RunJumpDev/YouSawMe-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/RunJumpDev/YouSawMe-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = YouSawMe;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -523,8 +527,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RunJumpDevTests/RunJumpDevTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "RunJumpDevTests/YouSawMeTests-Info.plist";
+				PRODUCT_NAME = YouSawMeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -542,8 +546,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RunJumpDev/RunJumpDev-Prefix.pch";
-				INFOPLIST_FILE = "RunJumpDevTests/RunJumpDevTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "RunJumpDevTests/YouSawMeTests-Info.plist";
+				PRODUCT_NAME = YouSawMeTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -552,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EA87D3918E66BD80057715D /* Build configuration list for PBXProject "RunJumpDev" */ = {
+		0EA87D3918E66BD80057715D /* Build configuration list for PBXProject "YouSawMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA87D6E18E66BD90057715D /* Debug */,
@@ -561,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EA87D7018E66BD90057715D /* Build configuration list for PBXNativeTarget "RunJumpDev" */ = {
+		0EA87D7018E66BD90057715D /* Build configuration list for PBXNativeTarget "YouSawMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA87D7118E66BD90057715D /* Debug */,
@@ -570,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EA87D7318E66BD90057715D /* Build configuration list for PBXNativeTarget "RunJumpDevTests" */ = {
+		0EA87D7318E66BD90057715D /* Build configuration list for PBXNativeTarget "YouSawMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EA87D7418E66BD90057715D /* Debug */,

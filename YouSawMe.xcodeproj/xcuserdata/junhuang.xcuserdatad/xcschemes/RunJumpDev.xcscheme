@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
                BuildableName = "RunJumpDev.app"
-               BlueprintName = "RunJumpDev"
-               ReferencedContainer = "container:RunJumpDev.xcodeproj">
+               BlueprintName = "YouSawMe"
+               ReferencedContainer = "container:YouSawMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA87D5E18E66BD90057715D"
                BuildableName = "RunJumpDevTests.xctest"
-               BlueprintName = "RunJumpDevTests"
-               ReferencedContainer = "container:RunJumpDev.xcodeproj">
+               BlueprintName = "YouSawMeTests"
+               ReferencedContainer = "container:YouSawMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
             BuildableName = "RunJumpDev.app"
-            BlueprintName = "RunJumpDev"
-            ReferencedContainer = "container:RunJumpDev.xcodeproj">
+            BlueprintName = "YouSawMe"
+            ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
             BuildableName = "RunJumpDev.app"
-            BlueprintName = "RunJumpDev"
-            ReferencedContainer = "container:RunJumpDev.xcodeproj">
+            BlueprintName = "YouSawMe"
+            ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
             BuildableName = "RunJumpDev.app"
-            BlueprintName = "RunJumpDev"
-            ReferencedContainer = "container:RunJumpDev.xcodeproj">
+            BlueprintName = "YouSawMe"
+            ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
