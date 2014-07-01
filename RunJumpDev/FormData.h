@@ -13,7 +13,9 @@
 @property (nonatomic,strong) NSString * firstName;
 @property (nonatomic,strong) NSString * lastName;
 @property (nonatomic,strong) NSString * Email;
-@property (nonatomic,strong) NSString * Comments;
+@property (nonatomic,strong) NSString * homeCity;
+@property (nonatomic,strong) NSString * state;
+@property (nonatomic,strong) NSString * otherPurpose;
 @property (nonatomic) BOOL bCheckAll;
 @property (nonatomic) BOOL bNotifyFutureGame;
 

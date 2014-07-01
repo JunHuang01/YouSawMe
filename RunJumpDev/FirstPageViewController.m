@@ -27,6 +27,9 @@
     self.FirstNameField.text = [_currForm firstName];
     self.LastNameField.text = [_currForm lastName];
     self.EmailField.text = [_currForm Email];
+    self.HomeCity.text = [_currForm homeCity];
+    [self.StatePicker setTitle:[_currForm state] forState:UIControlStateNormal];
+    
     
     self.NextPageButton.layer.cornerRadius = 10;
     self.NextPageButton.layer.borderColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0f].CGColor;
@@ -62,11 +65,16 @@
         //NSLog(@"%@", theTextField.text);
     }
     else if (theTextField == self.EmailField){
-        [ theTextField resignFirstResponder]; //ToDo, change it to check for all input and go to next page;
-        [self onNextPage:self];
+        [theTextField resignFirstResponder];
+        [self.HomeCity becomeFirstResponder];
+        
         //NSLog(@"Email in");
         //NSLog(@"%@", theTextField.text);
         
+    }
+    else if (theTextField == self.HomeCity){
+        [theTextField resignFirstResponder]; //ToDo, change it to check for all input and go to next page;
+        [self onNextPage:self];
     }
     //[self cacheData];
     return YES;
@@ -93,6 +101,7 @@
     [_currForm setFirstName:self.FirstNameField.text];
     [_currForm setLastName:self.LastNameField.text];
     [_currForm setEmail:self.EmailField.text];
+    [_currForm setHomeCity:self.HomeCity.text];
     [_currForm LogCurrData];
 }
 

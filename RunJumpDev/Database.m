@@ -17,7 +17,7 @@
         self = [[Database alloc] init];
         
     }
-    _filePath = [[NSString alloc] initWithFormat:@"RunJumpDev.sqlite" ];
+    _filePath = [[NSString alloc] initWithFormat:@"YouSawMe.sqlite" ];
     [self openDB];
     
     return self;
@@ -26,7 +26,7 @@
 -(NSString*)filePath{
     if(!_filePath)
     {
-        _filePath = [[NSString alloc] initWithFormat:@"RunJumpDev.sqlite" ];
+        _filePath = [[NSString alloc] initWithFormat:@"YouSawMe.sqlite" ];
     }
     
     return _filePath;
@@ -54,7 +54,7 @@
 }
 
 -(BOOL) CreateTable{
-    NSString *ceateSQL = @"CREATE TABLE IF NOT EXISTS RunJumpDev(ID INTEGER PRIMARY KEY AUTOINCREMENT, FIRSTNAME TEXT, LASTNAME TEXT, EMAIl TEXT, COMMENTS BLOB, GAME1 INTERGER,GAME2 INTERGER,GAME3 INTERGER,GAME4 INTERGER,GAME5 INTERGER,GAME6 INTERGER,GAME7 INTERGER,GAME8 INTERGER,GAME9 INTERGER,NOTIFYFUTURE INTERGER, CHECKALL INTERGER )";
+    NSString *ceateSQL = @"CREATE TABLE IF NOT EXISTS YouSawMe(ID INTEGER PRIMARY KEY AUTOINCREMENT, FIRSTNAME TEXT, LASTNAME TEXT, EMAIl TEXT, HOMECITY TEXT,STATE TEXT,OTHERPURPOSE TEXT, GAME1 INTERGER,GAME2 INTERGER,GAME3 INTERGER,GAME4 INTERGER,GAME5 INTERGER,GAME6 INTERGER,GAME7 INTERGER,GAME8 INTERGER,GAME9 INTERGER,NOTIFYFUTURE INTERGER, CHECKALL INTERGER )";
     
     char *ERROR;
     
@@ -70,17 +70,21 @@
 -(BOOL) saveDataWithFirstName:(NSString*) firstName
                      lastName:(NSString*) lastName
                         email:(NSString*) email
-                     comments:(NSString*) comments
+                     homeCity:(NSString*) homeCity
+                        state:(NSString*) state
+                 otherPurpose:(NSString*) otherPurpose
                   gameChoices:(NSMutableArray *) gameChoices
                 bFutureNotify:(int )bFutureNotify
                     bCheckAll:(int )bCheckAll
 {
     if (sqlite3_open([_filePath UTF8String],&_database) == SQLITE_OK){
-        NSString *insertSQL = [NSString stringWithFormat:@"insert into RunJumpDev(FIRSTNAME,LASTNAME,EMAIL,COMMENTS,GAME1,GAME2,GAME3,GAME4,GAME5,GAME6,GAME7,GAME8,GAME9,NOTIFYFUTURE,CHECKALL) values (\"%@\",\"%@\",\"%@\",\"%@\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\")",
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into YouSawMe(FIRSTNAME,LASTNAME,EMAIL,HOMECITY,STATE,OTHERPURPOSE,GAME1,GAME2,GAME3,GAME4,GAME5,GAME6,GAME7,GAME8,GAME9,NOTIFYFUTURE,CHECKALL) values (\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%@\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\",\"%d\")",
                                firstName,
                                lastName,
                                email,
-                               comments,
+                               homeCity,
+                               state,
+                               otherPurpose,
                                [self getIntVal:gameChoices[0]],
                                [self getIntVal:gameChoices[1]],
                                [self getIntVal:gameChoices[2]],

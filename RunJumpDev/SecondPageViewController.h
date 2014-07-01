@@ -15,7 +15,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *gameCheckedList;
 @property (strong, nonatomic) IBOutlet UIButton *PreviousPageButton;
 @property (strong, nonatomic) IBOutlet UIButton *NextPageButton;
-
+@property (strong, nonatomic) IBOutlet UITextField *otherPurpose;
 
 @property (strong, nonatomic) FormData * currForm;
 @end

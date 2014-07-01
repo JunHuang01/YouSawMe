@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FinalPageViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIButton *NextPageButton;
-
+extern BOOL bFinishedWaiting;
 @end

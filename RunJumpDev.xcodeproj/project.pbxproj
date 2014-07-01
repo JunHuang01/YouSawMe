@@ -28,12 +28,12 @@
 		0EA87D8D18EBE7CA0057715D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA87D8C18EBE7CA0057715D /* unchecked.png */; };
 		0EA87D9018EBE9B40057715D /* SecondPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87D8F18EBE9B40057715D /* SecondPageViewController.m */; };
 		0EA87D9618EC0D110057715D /* FormData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87D9518EC0D110057715D /* FormData.m */; };
-		0EA87D9918EC32600057715D /* ThirdPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87D9818EC32600057715D /* ThirdPageViewController.m */; };
 		0EA87D9F18EC3D950057715D /* CommentBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87D9E18EC3D950057715D /* CommentBox.m */; };
 		0EA87DA118EC44180057715D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA87DA018EC44180057715D /* libsqlite3.dylib */; };
 		0EA87DA418EC47620057715D /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87DA318EC47620057715D /* Database.m */; };
 		0EA87DA718F0322D0057715D /* FinalPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA87DA618F0322D0057715D /* FinalPageViewController.m */; };
 		0EFAC57A196291B40050D37A /* YouSawMe.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFAC579196291B40050D37A /* YouSawMe.png */; };
+		0EFAC57E1962B4820050D37A /* StatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFAC57D1962B4820050D37A /* StatePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,16 +76,16 @@
 		0EA87D8F18EBE9B40057715D /* SecondPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondPageViewController.m; sourceTree = "<group>"; };
 		0EA87D9418EC0D110057715D /* FormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormData.h; sourceTree = "<group>"; };
 		0EA87D9518EC0D110057715D /* FormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormData.m; sourceTree = "<group>"; };
-		0EA87D9718EC32600057715D /* ThirdPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPageViewController.h; sourceTree = "<group>"; };
-		0EA87D9818EC32600057715D /* ThirdPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPageViewController.m; sourceTree = "<group>"; };
 		0EA87D9D18EC3D950057715D /* CommentBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentBox.h; sourceTree = "<group>"; };
 		0EA87D9E18EC3D950057715D /* CommentBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentBox.m; sourceTree = "<group>"; };
 		0EA87DA018EC44180057715D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		0EA87DA218EC47620057715D /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		0EA87DA318EC47620057715D /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
-		0EA87DA518F0322D0057715D /* FinalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPageViewController.h; sourceTree = "<group>"; };
 		0EA87DA618F0322D0057715D /* FinalPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalPageViewController.m; sourceTree = "<group>"; };
 		0EFAC579196291B40050D37A /* YouSawMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YouSawMe.png; path = RunJumpDev/YouSawMe.png; sourceTree = "<group>"; };
+		0EFAC57B1962A0840050D37A /* FinalPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalPageViewController.h; sourceTree = "<group>"; };
+		0EFAC57C1962B4820050D37A /* StatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatePickerViewController.h; sourceTree = "<group>"; };
+		0EFAC57D1962B4820050D37A /* StatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,12 +228,12 @@
 				0EA87D7C18E76D800057715D /* FirstPageViewController.m */,
 				0EA87D8E18EBE9B40057715D /* SecondPageViewController.h */,
 				0EA87D8F18EBE9B40057715D /* SecondPageViewController.m */,
-				0EA87D9718EC32600057715D /* ThirdPageViewController.h */,
-				0EA87D9818EC32600057715D /* ThirdPageViewController.m */,
-				0EA87DA518F0322D0057715D /* FinalPageViewController.h */,
+				0EFAC57B1962A0840050D37A /* FinalPageViewController.h */,
 				0EA87DA618F0322D0057715D /* FinalPageViewController.m */,
 				0E1049F818F03AD800E17081 /* AdminPageViewController.h */,
 				0E1049F918F03AD800E17081 /* AdminPageViewController.m */,
+				0EFAC57C1962B4820050D37A /* StatePickerViewController.h */,
+				0EFAC57D1962B4820050D37A /* StatePickerViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,9 +350,9 @@
 				0EA87DA418EC47620057715D /* Database.m in Sources */,
 				0EA87D9618EC0D110057715D /* FormData.m in Sources */,
 				0EA87D9F18EC3D950057715D /* CommentBox.m in Sources */,
-				0EA87D9918EC32600057715D /* ThirdPageViewController.m in Sources */,
 				0E1049FA18F03AD800E17081 /* AdminPageViewController.m in Sources */,
 				0EA87D4E18E66BD90057715D /* main.m in Sources */,
+				0EFAC57E1962B4820050D37A /* StatePickerViewController.m in Sources */,
 				0EA87D7E18E76D800057715D /* FirstPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

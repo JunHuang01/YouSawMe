@@ -15,7 +15,9 @@
 -(BOOL) saveDataWithFirstName:(NSString*) firstName
                      lastName:(NSString*) lastName
                         email:(NSString*) email
-                     comments:(NSString*) comments
+                     homeCity:(NSString*) homeCity
+                        state:(NSString*) state
+                 otherPurpose:(NSString*) otherPurpose
                   gameChoices:(NSMutableArray *) gameChoices
                 bFutureNotify:(int)bFutureNotify
                     bCheckAll:(int)bCheckAll;

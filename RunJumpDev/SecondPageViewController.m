@@ -37,6 +37,8 @@
         [[_gameCheckedList objectAtIndex:i] setSelected:bSel];
     }
     
+    self.otherPurpose.text = [_currForm otherPurpose];
+    
     BOOL bFutureNotify = [_currForm bNotifyFutureGame];
     [_bNotifyFutureGame setSelected:bFutureNotify];
     
@@ -64,15 +66,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-/*
-- (IBAction)onCheckFutureNotification:(id)sender {
-    BOOL bSel = [_bNotifyFutureGame isSelected];
-    bSel = !bSel;
-    
-    [_currForm setBNotifyFutureGame:bSel];
-    [_bNotifyFutureGame setSelected:bSel];
-}*/
 
 - (IBAction)onCheckedAllGameBox:(id)sender {
     NSLog(@"touched!");
@@ -113,5 +106,36 @@
     
     [_currForm LogCurrData];
 }
+
+
+- (IBAction)SubmitData:(id)sender {
+    [self submitDataToDB];
+}
+
+- (void) submitDataToDB{
+    if ([_currForm SaveToDB])
+    {
+        [_currForm getNewForm];
+        NSLog(@"Submited data");
+    }
+    else{
+        NSLog(@"Submited data failed");
+    }
+}
+
+- (void)cacheData{
+    [_currForm setOtherPurpose:self.otherPurpose.text];
+    [_currForm LogCurrData];
+}
+
+
+- (IBAction)onNextPage:(id)sender {
+    [self cacheData];
+
+    [self performSegueWithIdentifier:@"SecondToFirstSegue" sender:self];
+}
+
+
+
 
 @end

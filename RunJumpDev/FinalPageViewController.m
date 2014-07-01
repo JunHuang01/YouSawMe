@@ -27,9 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.NextPageButton.layer.cornerRadius = 10;
-    self.NextPageButton.layer.borderColor = [UIColor colorWithRed:128.0/255.0 green:128.0/255.0 blue:128.0/255.0 alpha:1.0f].CGColor;
-    self.NextPageButton.layer.borderWidth = 2.0f;
     
 }
 
@@ -39,4 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)viewDidAppear:(BOOL)animated{
+    sleep(3);
+    [self performSegueWithIdentifier:@"FinalToFirstPageSegue" sender:self];
+}
 @end

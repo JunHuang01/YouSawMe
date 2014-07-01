@@ -37,7 +37,7 @@ static FormData * single = nil;
 }
 
 -(void)LogCurrData{
-    NSLog(@"FirstName: %@, LastName: %@, Email: %@, Comments: %@ ",_firstName,_lastName, _Email, _Comments);
+    NSLog(@"FirstName: %@, LastName: %@, Email: %@, HomeCity: %@, State: %@, otherPurpose: %@ ",_firstName,_lastName, _Email, _homeCity,_state,_otherPurpose);
     
     for (int i = 0; i < [_gameSelection count]; ++i){
         NSLog(@"The game at index %d is set to %i",i,[[_gameSelection objectAtIndex:i] intValue]);
@@ -71,12 +71,28 @@ static FormData * single = nil;
     return _Email;
 }
 
--(NSString *)Comments{
-    if(!_Comments)
-        _Comments = @"";
+-(NSString*)homeCity{
+    if(!_homeCity)
+        _homeCity = @"";
     
-    return _Comments;
+    return _homeCity;
 }
+
+-(NSString *)state{
+    if(!_state)
+        _state = @"AL";
+    
+    return _state;
+}
+
+-(NSString *)otherPurpose{
+    if(!_otherPurpose){
+        _otherPurpose = @"";
+    }
+    
+    return _otherPurpose;
+}
+
 
 -(NSArray *)gameSelection{
     if (!_gameSelection) {
@@ -98,7 +114,7 @@ static FormData * single = nil;
     int bNotifyFuture = [[NSNumber numberWithBool:_bNotifyFutureGame] intValue];
     int bCheck = [[NSNumber numberWithBool:_bCheckAll] intValue];
     _database = [[Database alloc] init];
-    return [_database saveDataWithFirstName:_firstName lastName:_lastName email:_Email comments:_Comments gameChoices:_gameSelection bFutureNotify:bNotifyFuture bCheckAll:bCheck];
+    return [_database saveDataWithFirstName:_firstName lastName:_lastName email:_Email homeCity:_homeCity state:_state otherPurpose:_otherPurpose gameChoices:_gameSelection bFutureNotify:bNotifyFuture bCheckAll:bCheck];
 }
 
 
