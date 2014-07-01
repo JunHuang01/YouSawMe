@@ -83,7 +83,7 @@
 }
 - (IBAction)onNextPage:(id)sender {
     [self cacheData];
-    if ([self checkEmail])
+    if ([self checkEmail] || [self isAdminUser])
     {
         if([self isAdminUser]){
             [_currForm getNewForm];
