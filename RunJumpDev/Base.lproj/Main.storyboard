@@ -188,6 +188,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="StatePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rh-7h-n6w"/>
                                             <segue destination="O3v-7R-NPM" kind="modal" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1dl-TC-DDu"/>
                                         </connections>
                                     </button>

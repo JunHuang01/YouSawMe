@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
-               BuildableName = "RunJumpDev.app"
+               BuildableName = "YouSawMe.app"
                BlueprintName = "YouSawMe"
                ReferencedContainer = "container:YouSawMe.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA87D5E18E66BD90057715D"
-               BuildableName = "RunJumpDevTests.xctest"
+               BuildableName = "YouSawMeTests.xctest"
                BlueprintName = "YouSawMeTests"
                ReferencedContainer = "container:YouSawMe.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
-            BuildableName = "RunJumpDev.app"
+            BuildableName = "YouSawMe.app"
             BlueprintName = "YouSawMe"
             ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
-            BuildableName = "RunJumpDev.app"
+            BuildableName = "YouSawMe.app"
             BlueprintName = "YouSawMe"
             ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA87D3D18E66BD80057715D"
-            BuildableName = "RunJumpDev.app"
+            BuildableName = "YouSawMe.app"
             BlueprintName = "YouSawMe"
             ReferencedContainer = "container:YouSawMe.xcodeproj">
          </BuildableReference>

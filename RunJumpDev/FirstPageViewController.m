@@ -39,6 +39,9 @@
     
     
 }
+- (IBAction)StatePicker:(id)sender {
+    [self cacheData];
+}
 
 /*-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return UIInterfaceOrientationIsLandscape(interfaceOrientation);
@@ -119,7 +122,7 @@
     int iAtCount = 0;
     int iDotCountAfterAt = 0;
     NSString* t_Email = self.EmailField.text;
-    int iLen = t_Email.length;
+    int iLen = (int)t_Email.length;
     
     if (iLen <4)
         return false;
