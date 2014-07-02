@@ -105,6 +105,7 @@
 
 
 - (IBAction)SubmitData:(id)sender {
+    [self cacheData];
     [self submitDataToDB];
 }
 

@@ -134,6 +134,8 @@
 
 -(void)DumpDBtoCSV{
     NSString *csv = [[NSString alloc] init];
+    //Create CSV header
+    csv = [csv stringByAppendingString:@"First Name,Last Name,Email,homecity,state,Other Purpose,Walking,Running,Bicycling,Motorcycling,Concerts,Partying,Work Safety, Other \n"];
   
     
     if (sqlite3_open([_filePath UTF8String],&_database) == SQLITE_OK){ {
