@@ -73,14 +73,33 @@
 -(BOOL) CreateTable{
     NSString *ceateSQL = @"CREATE TABLE IF NOT EXISTS YouSawMe(ID INTEGER PRIMARY KEY AUTOINCREMENT, FIRSTNAME TEXT, LASTNAME TEXT, EMAIl TEXT, HOMECITY TEXT,STATE TEXT,OTHERPURPOSE TEXT, GAME1 INTERGER,GAME2 INTERGER,GAME3 INTERGER,GAME4 INTERGER,GAME5 INTERGER,GAME6 INTERGER,GAME7 INTERGER,GAME8 INTERGER)";
     
+    NSString *createSQL2 = @"CREATE TABLE IF NOT EXISTS LASTEXPORTID(TABLENAME TEXT PRIMARY KEY, LASTID INTERGER)";
+
+    NSString *createSQL3 = @"INSERT INTO LASTEXPORTID (TABLENAME, LASTID) SELECT 'YouSawMe' , 0 WHERE NOT EXISTS (SELECT * FROM LASTEXPORTID WHERE TABLENAME = 'YouSawMe')";
+    
     char *ERROR;
     
     if (sqlite3_exec(_database, [ceateSQL UTF8String], NULL, NULL, &ERROR)!=SQLITE_OK){
         sqlite3_close(_database);
-        NSAssert(0, @"ceate table failed!");
+        NSAssert(0, @"create table failed!");
         NSLog(@"create table failed");
         return NO;
     }
+    
+    if (sqlite3_exec(_database, [createSQL2 UTF8String], NULL, NULL, &ERROR)!=SQLITE_OK){
+        sqlite3_close(_database);
+        NSAssert(0, @"create table LASTEXPORTID failed!");
+        NSLog(@"create LASTEXPORTID table failed");
+        return NO;
+    }
+    
+    if (sqlite3_exec(_database, [createSQL3 UTF8String], NULL, NULL, &ERROR)!=SQLITE_OK){
+        sqlite3_close(_database);
+        NSAssert(0, @"INSERT ENTRY FAILED");
+        NSLog(@"INSERT ENTRY FAILED");
+        return NO;
+    }
+
     return YES;
 }
 
@@ -132,20 +151,44 @@
     return result;
 }
 
--(void)DumpDBtoCSV{
+-(void)DumpDBtoCSV:(BOOL) bDumpALL{
     NSString *csv = [[NSString alloc] init];
     //Create CSV header
     csv = [csv stringByAppendingString:@"First Name,Last Name,Email,homecity,state,Other Purpose,Walking,Running,Bicycling,Motorcycling,Concerts,Partying,Work Safety, Other \n"];
-  
     
+    int lastID = 0;
     if (sqlite3_open([_filePath UTF8String],&_database) == SQLITE_OK){ {
-        const char *sqlStatement = [[NSString stringWithFormat:@"SELECT * FROM YouSawMe"] UTF8String];
+        const char *sqlStatement = [[NSString stringWithFormat:@"SELECT * FROM LASTEXPORTID WHERE TABLENAME = 'YouSawMe'"] UTF8String];
         sqlite3_stmt *compiledStatement;
         if(sqlite3_prepare_v2(_database,sqlStatement,-1,&compiledStatement,NULL) == SQLITE_OK) {
-            
+            while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+                NSNumber* lastExportID = [NSNumber numberWithInt:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)] intValue]];
+                
+                lastID = [lastExportID integerValue];
+            }
+        }
+    }
+    
+    
+    const char* ExportALLStatement = [[NSString stringWithFormat:@"SELECT * FROM YouSawMe"] UTF8String];
+    const char* ExportNewOnlyStatement = [[NSString stringWithFormat:@"SELECT * FROM YouSawMe WHERE ID > %d",lastID] UTF8String];
+    
+    
+    if (sqlite3_open([_filePath UTF8String],&_database) == SQLITE_OK){
+        const char *sqlStatement;
+        if(bDumpALL){
+            sqlStatement = ExportALLStatement;
+        }
+        else
+        {
+            sqlStatement = ExportNewOnlyStatement;
+        }
+        sqlite3_stmt *compiledStatement;
+        if(sqlite3_prepare_v2(_database,sqlStatement,-1,&compiledStatement,NULL) == SQLITE_OK) {
+            int lastID = 0;
             while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
                 //this assumes that there are two rows in your database you want to get data from
-                
+                NSNumber* ID = [NSNumber numberWithInt:[[NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)] intValue]];
                 NSString* FirstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                 NSString* LastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
                 NSString* Email = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 3)];
@@ -176,7 +219,20 @@
                  game7,
                  game8
                  ];
+                
+                lastID = MAX(lastID, [ID integerValue]);
             }
+            
+            NSString *updateSQL = [NSString stringWithFormat:@"UPDATE LASTEXPORTID SET LASTID = %d WHERE TABLENAME = 'YouSawMe'",lastID];
+            
+            char *ERROR;
+            
+            if (sqlite3_exec(_database, [updateSQL UTF8String], NULL, NULL, &ERROR)!=SQLITE_OK){
+                sqlite3_close(_database);
+                NSAssert(0, @"update lastID failed!");
+                NSLog(@"update lastID failed");
+            }
+            
             
             sqlite3_finalize(compiledStatement);
         }else{

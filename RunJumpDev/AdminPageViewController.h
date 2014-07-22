@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSString* databasePath;
 @property (strong, nonatomic) Database* mydatabase;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (nonatomic, assign) BOOL bDumpALL;
 
 @end

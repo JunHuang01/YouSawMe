@@ -36,6 +36,12 @@
     
 }
 
+-(BOOL)bDumpALL{
+    if(!_bDumpALL)
+        _bDumpALL = YES;
+    return _bDumpALL;
+}
+
 -(Database *)mydatabase{
     if(!_mydatabase){
         _mydatabase = [[Database alloc] init];
@@ -54,7 +60,18 @@
     
     return _databasePath;
 }
-- (IBAction)export:(id)sender {
+- (IBAction)exportNEWOnly:(id)sender {
+    
+    _mydatabase = [[Database alloc] init];
+    _bDumpALL = NO;
+    
+    [self performSelectorInBackground:@selector(exportImpl) withObject:nil];
+}
+
+- (IBAction)exportALL:(id)sender {
+    
+    _mydatabase = [[Database alloc] init];
+    _bDumpALL = YES;
     
     [self performSelectorInBackground:@selector(exportImpl) withObject:nil];
 }
@@ -75,7 +92,7 @@
         // TODO: autorelease pool needed ?
         
         _mydatabase = [[Database alloc] init];
-        [_mydatabase DumpDBtoCSV];
+        [_mydatabase DumpDBtoCSV:_bDumpALL];
         _databasePath = [_mydatabase dataCSVFilePath];
         filePath = _databasePath;
         NSData* database = [NSData dataWithContentsOfFile: filePath];

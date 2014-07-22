@@ -23,6 +23,6 @@
                   gameChoices:(NSMutableArray *) gameChoices;
 
 -(BOOL)openDB;
--(void)DumpDBtoCSV;
+-(void)DumpDBtoCSV:(BOOL)bDumpALL;
 -(NSString *)dataCSVFilePath;
 @end
